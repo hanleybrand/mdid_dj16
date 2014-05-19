@@ -22,4 +22,4 @@ unused_bin/
 scratch/
 2*M.mysql
 bin-release-temp/
-
+static/*

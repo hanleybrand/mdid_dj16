@@ -2,6 +2,7 @@
 python-dateutil
 MySQL-python
 Django
+django-grappelli
 django-extensions
 django-debug-toolbar
 python-ldap
