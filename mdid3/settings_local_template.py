@@ -35,7 +35,7 @@ STATICFILES_DIRS = (
 # this defines where files will be stored - by default it will be a directory
 # called mdid_dj16-data that is in the same directory as PROJECT_ROOT (stored outside of the application)
 #DEFAULT_DATA_DIR = os.path.normpath(os.path.join(PROJECT_ROOT, '../', 'mdid_dj16-data/'))
-DEFAULT_DATA_DIR = os.path.normpath(os.path.join(PROJECT_ROOT, '../', 'mdid-data/', 'mdid35-data'))
+DEFAULT_DATA_DIR = os.path.normpath(os.path.join(PROJECT_ROOT, '../', 'mdid-data/', 'mdid3-data'))
 DEFAULT_CUSTOM_DIR = os.path.normpath(os.path.join(PROJECT_ROOT, '../', 'mdid-data/', 'local_static'))
 
 # scratch_dir is where non-permanent files (including image thumbnails) are stored
@@ -186,8 +186,9 @@ DATABASES = {
         # "HOST": '/var/run/mysql',
         'HOST': '127.0.0.1',
         'PORT': '',
+        # TODO: test CONN_MAX_AGE (throws error if set to None)
         #  lifetime of a database connection, in seconds - 0 is the old behavior, None = unlimited persistent connections
-        'CONN_MAX_AGE': 'None',
+        # 'CONN_MAX_AGE': 'None',
         'OPTIONS': {
             # change init_command if you want to specify what mysql engine to use
             # 'init_command': 'SET storage_engine=INNODB',
@@ -298,8 +299,6 @@ if DEBUG:
     )
 
     INSTALLED_APPS = (
-        #'apps.import_presentation',
-        #'apps.add_users_from_json',
         'debug_toolbar',
     )
 
@@ -402,6 +401,11 @@ LOGGING = {
     }
 }
 
+if DEBUG:
+    def show_toolbar(request):
+        return True
+    SHOW_TOOLBAR_CALLBACK = show_toolbar
+
+
 
 ############# end settings_local #####-##### #####-##### #####-##### #####-##### #####-##### #####-##### #####-#####
-

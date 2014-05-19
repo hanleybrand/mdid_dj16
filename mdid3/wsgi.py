@@ -1,5 +1,5 @@
 """
-WSGI config for mdid35 project.
+WSGI config for mdid3 project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 

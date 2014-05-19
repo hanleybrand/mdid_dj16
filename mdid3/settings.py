@@ -1,5 +1,5 @@
 """
-Django settings for mdid35 project.
+Django settings for mdid3 project.
 
 For more information on this file, see
 https://docs.djangoproject.com/en/1.6/topics/settings/
@@ -12,11 +12,36 @@ https://docs.djangoproject.com/en/1.6/ref/settings/
 import os
 import sys
 
-install_dir = os.path.dirname(os.path.dirname(__file__))
-lib_dir = os.path.join(install_dir, 'rooibos', 'contrib')
+# install_dir = os.path.dirname(os.path.dirname(__file__))
 
-if not install_dir in sys.path: sys.path.append(install_dir)
-if not lib_dir in sys.path: sys.path.append(lib_dir)
+# MDID repo root
+PROJECT_ROOT = os.path.normpath(os.path.join(os.path.dirname(__file__), '../'))
+# setting for django-extensions
+BASE_DIR = PROJECT_ROOT
+# the rooibos directory
+CONTRIB_DIR = os.path.join(PROJECT_ROOT, 'rooibos', 'contrib')
+ROOIBOS_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'rooibos'))
+
+if not BASE_DIR in sys.path: sys.path.append(BASE_DIR)
+if not CONTRIB_DIR in sys.path: sys.path.append(CONTRIB_DIR)
+
+# STATIC_FILES
+# where non-dynamic files are stored (i.e. javascript libraries, css, etc.)
+STATIC_ROOT = os.path.normpath(os.path.join(PROJECT_ROOT, 'static'))
+STATIC_URL = '/static/'
+STATICFILES_DIRS = (
+    os.path.normpath(os.path.join(ROOIBOS_ROOT, 'static')),
+)
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+)
+#TODO: find references to STATIC_DIR and change to STATIC_ROOT
+STATIC_DIR = STATIC_ROOT
+
+FAVICON_URL = os.path.normpath(os.path.join(STATIC_URL, 'images', 'favicon.ico'))
+
+
 
 # Language code for this installation. All choices can be found here:
 # http://www.i18nguy.com/unicode/language-identifiers.html
@@ -42,8 +67,6 @@ MEDIA_ROOT = ''
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
 MEDIA_URL = ''
 
-STATIC_DIR = os.path.join(install_dir, 'rooibos', 'static')
-STATIC_URL = '/static/'
 
 
 # Quick-start development settings - unsuitable for production
@@ -71,7 +94,6 @@ EXPOSE_TO_CONTEXT = (
     )
 
 
-
 # Application definition
 
 INSTALLED_APPS = (
@@ -80,6 +102,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.flatpages',
+    #'grappelli_extensions',
+    'grappelli',
     'django.contrib.admin',
     'django.contrib.humanize',
     'django.contrib.comments',
@@ -119,6 +143,7 @@ INSTALLED_APPS = (
     'rooibos.contrib.impersonate',
     'rooibos.contrib.compressor',
     'rooibos.contrib.south',
+    'debug_toolbar',
 )
 
 #TEMPLATE_LOADERS = (
@@ -213,7 +238,7 @@ WSGI_APPLICATION = 'mdid3.wsgi.application'
 
 AUTH_PROFILE_MODULE = 'userprofile.UserProfile'
 
-WEBSERVICE_NAMESPACE = "http://mdid_dj16.jmu.edu/webservices"
+WEBSERVICE_NAMESPACE = "http://www.jmu.edu/webservices"
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.6/topics/i18n/
@@ -240,7 +265,8 @@ LOGIN_CHECKS = (
 )
 
 TEMPLATE_DIRS = (
-    os.path.join(install_dir, 'rooibos', 'templates'),
+    os.path.join(BASE_DIR, 'rooibos', 'templates'),
+    os.path.join(BASE_DIR, 'templates'),
 )
 
 PDF_PAGESIZE = 'letter'  # 'A4'

@@ -43,6 +43,7 @@ urls = [
     url(r'^login/$', login, {'HELP': 'logging-in', 'SSL': True}, name='login'),
     url(r'^logout/$', logout, {'HELP': 'logging-out', 'next_page': settings.LOGOUT_URL}, name='logout'),
     #    url(r'^admin/(.*)', admin.site.root, {'SSL': True}, name='admin'),
+    (r'^grappelli/', include('grappelli.urls')), # grappelli URLS
     (r'^admin/', include(admin.site.urls)),
 
     # Legacy URL for presentation viewer in earlier version
