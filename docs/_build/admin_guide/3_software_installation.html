@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Software Installation &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+    <link rel="up" title="Installation Guide" href="index.html" />
+    <link rel="next" title="Python Packages" href="4_python_packages.html" />
+    <link rel="prev" title="Technical Overview" href="2_technical_overview.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+ <!-- navbar.html -->
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install dependencies</a><ul>
+<li><a class="reference internal" href="#package-management-systems">Package Management systems</a><ul>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#redhat-packages">Redhat Packages</a></li>
+<li><a class="reference internal" href="#mac-os-x-homebrews">Mac OS X homebrews</a></li>
+<li><a class="reference internal" href="#windows-installers">Windows Installers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+
+            
+            
+          </ul>
+             
+              
+                <ul class="nav navbar-nav navbar-right">
+                    
+  <li>
+    <a href="2_technical_overview.html" title="Previous Chapter: Technical Overview"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Previous - Technical Overview</span>
+    </a>
+  </li>
+  <li>
+    <a href="4_python_packages.html" title="Next Chapter: Python Packages"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Next - Python Packages &raquo;</span>
+    </a>
+  </li>
+               </ul>
+              
+            
+
+        </div>
+    </div>
+  </div>
+ <!-- end navbar.html -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Installation Guide</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install dependencies</a><ul>
+<li><a class="reference internal" href="#package-management-systems">Package Management systems</a><ul>
+<li><a class="reference internal" href="#ubuntu">Ubuntu</a></li>
+<li><a class="reference internal" href="#redhat-packages">Redhat Packages</a></li>
+<li><a class="reference internal" href="#mac-os-x-homebrews">Mac OS X homebrews</a></li>
+<li><a class="reference internal" href="#windows-installers">Windows Installers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+  <li role="presentation" class="dropdown-header">Previous</li>
+  <li>
+    <a href="2_technical_overview.html" title="Previous Chapter: Technical Overview"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Technical Overview</span>
+    </a>
+  </li>
+  <li role="presentation" class="dropdown-header">Next</li>
+  <li>
+    <a href="4_python_packages.html" title="Next Chapter: Python Packages"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Python Packages &raquo;</span>
+    </a>
+  </li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="software-installation">
+<h1>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-dependencies">
+<h2>Install dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="package-management-systems">
+<h3>Package Management systems<a class="headerlink" href="#package-management-systems" title="Permalink to this headline">¶</a></h3>
+<p class="lead">To install the software dependencies required for mdid3 to run, use the
+system-specific methods listed below. Feedback and alternative
+procedures are welcome, please feel free to submit them.</p>
+<hr class="docutils" />
+<p><strong>Package Management System/Command</strong></p>
+<table width="100%" class="table table-bordered">
+<tbody class="table-striped table-hover">
+<th width="25%" >Ubuntu</th>
+<th width="25%" >Red Hat</th>
+<th width="25%" >Mac OS X</th>
+<th width="25%" >Windows 2008 or other</th>
+
+<tr>
+<td >
+<a href="https://help.ubuntu.com/community/AptGet/Howto">apt-get</a> </td>
+<td >Redhat - <a href="http://www.ibm.com/developerworks/linux/library/l-lpic1-v3-102-5/">yum</a> <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/5/html/Deployment_Guide/c1-yum.html">rhel 5</a> | <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-yum.html">rhel 6</a> </td>
+<td > <a href="http://mxcl.github.com/homebrew/">homebrew</a>, .pkg installers, source</td>
+<td >None (true? any dissent?).<br>Download installers or executables.</td>
+</tr>
+</tbody></table><table width="100%" class="table table-bordered">
+<tbody class="table-striped table-hover">
+<tr>
+<td width="16%" >&nbsp;</td>
+<th width="21%">Ubuntu</th>
+<th width="21%">Red Hat</th>
+<th width="21%">Mac OS X</th>
+<th width="21%">Windows 2008 or other</th>
+</tr>
+<tr></tr>
+<tr>
+<th>python</th>
+<td >installed</td>
+<td ><pre><code>python26</code></pre></td>
+<td ><a href="http://mac.github.com">installed</a></td>
+<td >Python 2.7.3 <br>(<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">32-bit</a>) | (<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi">64-bit</a>)</td>
+</tr>
+<tr><th>git</th>
+<td ><pre><code>git-core</code></pre></td>
+<td ><pre><code>git-core</code></pre></td>
+<td ><a href="http://mac.github.com">Github for Mac</a></td>
+<td ><a href="http://windows.github.com">Github for Windows</a></td>
+
+</tr>
+</tbody>
+</table><p>Below is a matrix of the software dependencies required for mdid3 to run
+correctly. In general, software installed via a package manager like apt
+or yum will be displayed as <tt class="docutils literal"><span class="pre">package-name</span></tt> whereas a downloadable
+installer, binary or downloadable source will be a <a class="reference external" href="#">text link</a></p>
+<p>Apt and Yum generally need to be run via sudo, but the Mac OS X package
+manager homebrew is designed specifically to <strong>not</strong> use sudo (assumedly
+because the normative mac user account has installation privileges). So
+to install the software package <tt class="file docutils literal"><span class="pre">packageX</span></tt>, use the commands:</p>
+<dl class="glossary docutils">
+<dt id="term-apt-get-ubuntu">apt-get (Ubuntu)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get install packageX</span>
+</pre></div></dd>
+<dt id="term-yum-red-hat">yum (Red Hat)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo yum install packageX</span>
+</pre></div></dd>
+<dt id="term-homebrew-mac-os-x">homebrew (Mac OS X)</dt>
+<dd><div class="first"><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">brew install packageX</span>
+</pre></div></dd>
+</dl>
+<p>Optionally, package managers can be given a list of packages, and be
+told to say &#8220;yes&#8221; to every question, and the human being installing the
+software can do something important, like drink coffee. A
+copy/paste-able single command will be presented at the bottom of the
+matrix.</p>
+<hr class="docutils" />
+<div class="section" id="ubuntu">
+<h4>Ubuntu<a class="headerlink" href="#ubuntu" title="Permalink to this headline">¶</a></h4>
+<pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get -y upgrade <span class="o">&amp;&amp;</span> install</span>
+</pre><pre class="highlight"><style type="text/css" scoped>span.prompt:before {
+  content: "$ ";
+}
+</style><span class="prompt">sudo apt-get  -y install openjdk-6-jre-headless python-setuptools libjpeg62-dev unixodbc unixodbc-dev freetds-dev tdsodbc python-dev libmysqlclient16-dev  python-ldap python-memcache memcached libapache2-mod-wsgi g++ mysql-server</span>
+</pre></div>
+<div class="section" id="redhat-packages">
+<h4>Redhat Packages<a class="headerlink" href="#redhat-packages" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+<div class="section" id="mac-os-x-homebrews">
+<h4>Mac OS X homebrews<a class="headerlink" href="#mac-os-x-homebrews" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+<div class="section" id="windows-installers">
+<h4>Windows Installers<a class="headerlink" href="#windows-installers" title="Permalink to this headline">¶</a></h4>
+<p>TBD</p>
+</div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.
+        &nbsp;|&nbsp;
+
+        <a href="../_sources/admin_guide/3_software_installation.txt" rel="nofollow" target="_blank">Sphinx Source</a> <br/>
+    </p>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mdiddocumentation'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</footer>
+  </body>
+</html>

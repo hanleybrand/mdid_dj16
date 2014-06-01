@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Working with git &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+    <link rel="next" title="Git Troubles" href="11_git_troubles.html" />
+    <link rel="prev" title="MDID Curation" href="../curation/MDID_Curation.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+ <!-- navbar.html -->
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Working with git</a><ul>
+<li><a class="reference internal" href="#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li><a class="reference internal" href="#getting-to-it">Getting to it</a></li>
+<li><a class="reference internal" href="#branching-is-best">Branching is best</a></li>
+<li><a class="reference internal" href="#important-note">Important note</a><ul>
+<li><a class="reference internal" href="#how-to-set-this-up">How to set this up</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+
+            
+            
+          </ul>
+             
+              
+                <ul class="nav navbar-nav navbar-right">
+                    
+  <li>
+    <a href="../curation/MDID_Curation.html" title="Previous Chapter: MDID Curation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; Previous - MDID Curation</span>
+    </a>
+  </li>
+  <li>
+    <a href="11_git_troubles.html" title="Next Chapter: Git Troubles"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Next - Git Troubles &raquo;</span>
+    </a>
+  </li>
+               </ul>
+              
+            
+
+        </div>
+    </div>
+  </div>
+ <!-- end navbar.html -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="index.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Working with git</a><ul>
+<li><a class="reference internal" href="#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li><a class="reference internal" href="#getting-to-it">Getting to it</a></li>
+<li><a class="reference internal" href="#branching-is-best">Branching is best</a></li>
+<li><a class="reference internal" href="#important-note">Important note</a><ul>
+<li><a class="reference internal" href="#how-to-set-this-up">How to set this up</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+  <li role="presentation" class="dropdown-header">Previous</li>
+  <li>
+    <a href="../curation/MDID_Curation.html" title="Previous Chapter: MDID Curation"><span class="glyphicon glyphicon-chevron-left visible-sm"></span><span class="hidden-sm">&laquo; MDID Curation</span>
+    </a>
+  </li>
+  <li role="presentation" class="dropdown-header">Next</li>
+  <li>
+    <a href="11_git_troubles.html" title="Next Chapter: Git Troubles"><span class="glyphicon glyphicon-chevron-right visible-sm"></span><span class="hidden-sm">Git Troubles &raquo;</span>
+    </a>
+  </li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="working-with-git">
+<h1>Working with git<a class="headerlink" href="#working-with-git" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="get-a-github-account-make-a-repo-or-at-least-make-issues">
+<h2>Get a github account, make a repo - or at least make issues<a class="headerlink" href="#get-a-github-account-make-a-repo-or-at-least-make-issues" title="Permalink to this headline">¶</a></h2>
+<p>Do it! If you keep settings_local.pt in your .gitignore file you won&#8217;t
+push sensitive info to the internet - and it makes asking questions
+about your code easier, because you can link specifically to the file
+that&#8217;s causing problems.</p>
+<p>ALSO - having a github account will enable participation in community
+wikis, etc.</p>
+<div class="line-block">
+<div class="line">ALSO - if you find an issue with mdid3, it&#8217;s probably best to file it</div>
+</div>
+<p>here, at least when you&#8217;re sure what&#8217;s causing the problem:
+| <a class="reference external" href="https://github.com/cit-jmu/rooibos/issues">https://github.com/cit-jmu/rooibos/issues</a></p>
+<p>AND ALSO - Consider doing a git tutorial. It&#8217;s a neat system in and of
+itself that has number of potential uses (even if you&#8217;re not a developer
+at all - it&#8217;s kind of like a free command line driven version of that
+Apple time machine, minus the fancy zooming things)</p>
+<ul class="simple">
+<li><a class="reference external" href="http://try.github.com/levels/1/challenges/1">http://try.github.com/levels/1/challenges/1</a></li>
+<li><a class="reference external" href="http://blip.tv/scott-chacon/git-talk-4113729">http://blip.tv/scott-chacon/git-talk-4113729</a></li>
+<li><a class="reference external" href="http://www.codeschool.com/courses/git-real">http://www.codeschool.com/courses/git-real</a>
+(requires subscription to codeschool)</li>
+</ul>
+<p>a bunch of tutorials and resources are collected here: *
+<a class="reference external" href="http://sixrevisions.com/resources/git-tutorials-beginners/">http://sixrevisions.com/resources/git-tutorials-beginners/</a></p>
+</div>
+<hr class="docutils" />
+<div class="section" id="getting-to-it">
+<h2>Getting to it<a class="headerlink" href="#getting-to-it" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="branching-is-best">
+<h2>Branching is best<a class="headerlink" href="#branching-is-best" title="Permalink to this headline">¶</a></h2>
+<p>It&#8217;s best if you keep your server on it&#8217;s own branch - this gives you
+the ability to switch to the canonical experimental branch, update,
+merge &amp; confirm there are not problems after updating and then re-merge
+experimental with your own custom branch. This may seem like an extra
+step, but it&#8217;s worth keeping your own modifications segmented away from
+the official repos.</p>
+</div>
+<div class="section" id="important-note">
+<h2>Important note<a class="headerlink" href="#important-note" title="Permalink to this headline">¶</a></h2>
+<blockquote>
+<div>Always run <tt class="docutils literal"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">syncdb</span></tt> and then restart your
+webserver after pulling an update from github - some changes can
+cause hard-to-notice through extremely bizarre behaviors if the
+database is not synced - even data loss (or at least data mangling)
+is possible. So just do it.</div></blockquote>
+<div class="section" id="how-to-set-this-up">
+<h3>How to set this up<a class="headerlink" href="#how-to-set-this-up" title="Permalink to this headline">¶</a></h3>
+<p>After you&#8217;ve successfully installed, create a branch before making
+changes (I&#8217;m calling it &#8216;ourSite&#8217; below). This can also be done directly
+after a successful fetch/merge from upstream (upstream is the standard
+name for a git repo that you&#8217;ve cloned, i.e. that you can not push to -
+in our collective case, upstream would be
+git://github.com/cit-jmu/rooibos.git ):</p>
+<div class="highlight-python"><div class="highlight"><pre>git branch create ourSite
+git checkout ourSite
+git branch
+   master
+   experimental
+ * ourSite
+</pre></div>
+</div>
+<p>Then do your customizations and commit the changes -</p>
+<div class="highlight-python"><div class="highlight"><pre>git -am commit &quot;commit message&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="updating-is-easyish">
+<h2>Updating is Easyish<a class="headerlink" href="#updating-is-easyish" title="Permalink to this headline">¶</a></h2>
+<p>When some new changes strike your fancy, fetch from upstream</p>
+<div class="highlight-python"><div class="highlight"><pre>git fetch upstream
+  remote: Counting objects: 67, done.
+  remote: Compressing objects: 100% (20/20), done.
+  remote: Total 44 (delta 33), reused 34 (delta 23)
+  Unpacking objects: 100% (44/44), done.
+  From git://github.com/cit-jmu/rooibos
+    a79c65e..6e3b630  experimental -&gt; upstream/experimental
+    bd553f8..580e79a  jmu-production -&gt; upstream/jmu-production
+</pre></div>
+</div>
+<p>(You could also do &#8216;git pull&#8217;, but that auto-merges with... well,
+exactly. It automerges. In my opinion, when I could explain it without
+looking it up, I&#8217;ll use git pull. In the meantime, I&#8217;ll use &#8216;git fetch&#8217;
+which gets the changes but keeps them in secret .gitland until I merge
+them somewhere explicitly.)</p>
+<p>So then, I want to patch my local experimental branch, which I keep in
+sync and unchanged from the cit-jmu repo:</p>
+<div class="highlight-python"><div class="highlight"><pre>git checkout experimental
+  Switched to branch &#39;experimental&#39;
+git status
+  # On branch experimental
+  nothing to commit (working directory clean)
+git merge upstream/experimental
+  Updating a79c65e..6e3b630
+  Fast-forward
+   rooibos/data/models.py              |   10 +++++-----
+   rooibos/legacy/views.py             |    9 ++++++++-
+   rooibos/solr/templates/browse.html  |   10 ++++++++++
+   rooibos/solr/templates/results.html |   12 +++++++++---
+   rooibos/solr/views.py               |    6 +++++-
+   rooibos/urls.py                     |    4 ++++
+   6 files changed, 41 insertions(+), 10 deletions(-)
+</pre></div>
+</div>
+<p>Now, I switch back to my local customizations and then merge in the new
+changes</p>
+<div class="highlight-python"><div class="highlight"><pre>git checkout ourSite
+   Switched to branch &#39;ourSite&#39;
+git merge experimental
+  Merge made by recursive.
+   rooibos/data/models.py              |   10 +++++-----
+   rooibos/legacy/views.py             |    9 ++++++++-
+   rooibos/solr/templates/browse.html  |   10 ++++++++++
+   rooibos/solr/templates/results.html |   12 +++++++++---
+   rooibos/solr/views.py               |    6 +++++-
+   rooibos/urls.py                     |    4 ++++
+   6 files changed, 41 insertions(+), 10 deletions(-)
+</pre></div>
+</div>
+<p>Now, if there&#8217;s no conflicts the output on your second merge will look
+like the first.</p>
+<p>If there are conflicts, read this:
+<a class="reference external" href="http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git">http://genomewiki.ucsc.edu/index.php/Resolving_merge_conflicts_in_Git</a></p>
+<p>Lastly, you&#8217;ll almost always need to <tt class="docutils literal"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">syncdb</span></tt> ad then
+restart web services - either via <tt class="docutils literal"><span class="pre">sudo</span> <span class="pre">apachectl</span> <span class="pre">restart</span></tt> or
+<tt class="docutils literal"><span class="pre">iisreset</span></tt> depending.</p>
+<p>And hopefully, you&#8217;ve successfully updated!</p>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.
+        &nbsp;|&nbsp;
+
+        <a href="../_sources/admin_guide/10_go_and_git.txt" rel="nofollow" target="_blank">Sphinx Source</a> <br/>
+    </p>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mdiddocumentation'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</footer>
+  </body>
+</html>

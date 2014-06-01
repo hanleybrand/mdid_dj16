@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Installation Guide &mdash; MDID Documentation 3.0 documentation</title>
+    
+    <link rel="stylesheet" href="../_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootswatch-3.1.0/flatly/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/bootstrap-sphinx.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../',
+        VERSION:     '3.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../_static/jquery.js"></script>
+    <script type="text/javascript" src="../_static/underscore.js"></script>
+    <script type="text/javascript" src="../_static/doctools.js"></script>
+    <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="../_static/js/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="../_static/js/jquery-fix.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-3.1.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../_static/bootstrap-sphinx.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+    <link rel="top" title="MDID Documentation 3.0 documentation" href="../index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1'>
+<meta name="apple-mobile-web-app-capable" content="yes">
+
+        <style>
+            a[name] {
+              padding-top: 100px;
+              margin-top: -100px;
+              display: inline-block; /* required for webkit browsers */
+            }
+        </style>
+
+
+
+  </head>
+  <body>
+
+ <!-- navbar.html -->
+  <div id="navbar" class="navbar navbar-inverse navbar-default ">
+    <div class="container">
+      <div class="navbar-header">
+        <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="../index.html">
+          MDID</a>
+
+      </div>
+
+        <div class="collapse navbar-collapse nav-collapse">
+          <ul class="nav navbar-nav">
+            <li class="divider-vertical"></li>
+            
+            
+              <li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/index.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+                <li class="dropdown">
+  <a role="button"
+     id="dLabelLocalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="#">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"
+      role="menu"
+      aria-labelledby="dLabelLocalToc"><ul>
+<li><a class="reference internal" href="#">Installation Guide</a><ul>
+<li><a class="reference internal" href="#technical-overview">Technical Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-installation">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install Dependencies</a><ul>
+<li><a class="reference internal" href="#management-systems">Management systems</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-package-installation">Software package installation</a><ul>
+<li><a class="reference internal" href="#update-installation">Update installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-installs">Optional Installs</a><ul>
+<li><a class="reference internal" href="#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li><a class="reference internal" href="#open-office">Open Office</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#setup-user-accounts">Setup user accounts</a><ul>
+<li><a class="reference internal" href="#create-mdid-user-account-this-allows-mdid3-to-run-programs-on-its">Create MDID user account (this allows mdid3 to run programs on it’s</a></li>
+<li><a class="reference internal" href="#add-admin-account-not-the-mdid-utility-account-to-the-staff-group">Add admin account (not the mdid utility account) to the staff group</a></li>
+<li><a class="reference internal" href="#find-the-following-line-and-append-your-username-not-mdid">Find the following line and append your username (not mdid)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#download-and-install-mdid3">### Download and Install MDID3</a><ul>
+<li><a class="reference internal" href="#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setup-the-database">Setup the database</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+              
+            
+
+            
+            
+          </ul>
+             
+              
+                <ul class="nav navbar-nav navbar-right">
+                    
+               </ul>
+              
+            
+
+        </div>
+    </div>
+  </div>
+ <!-- end navbar.html -->
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+        <div id="sidebar" class="bs-sidenav" role="complementary">
+            <ul>
+<form action="../search.html" method="get">
+ <div class="form-group">
+  <input type="text" name="q" class="form-control" placeholder="Search MDID Docs" />
+ </div>
+  <input type="hidden" name="check_keywords" value="yes" />
+  <input type="hidden" name="area" value="default" />
+</form>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li class="dropdown globaltoc-container">
+  <a role="button"
+     id="dLabelGlobalToc"
+     data-toggle="dropdown"
+     data-target="#"
+     href="../index.html">Chapters &amp; Pages <b class="caret"></b></a>
+  <ul class="dropdown-menu globaltoc"
+      role="menu"
+      aria-labelledby="dLabelGlobalToc"><ul>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/index.html">Installation Guide</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/2_technical_overview.html">Technical Overview</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/3_software_installation.html">Software Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/4_python_packages.html">Python Packages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/5_server_setup.html">Server Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/6_download_and_install.html">Download and Install</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/7_optional_installs.html">Optional Installs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/8_database_setup.html">Database Setup</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/9_apache_mod_wsgi.html">Apache and MOD_WSGI</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html">MDID Curation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#how-is-mdid-organized">How is MDID Organized?</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#getting-started-with-mdid">Getting Started with MDID</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../curation/MDID_Curation.html#additional-options-in-mdid3">Additional Options in MDID3</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#related-pages">Related Pages</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../curation/MDID_Curation.html#statistics-permissions-and-delete-collection-boxes">Statistics, Permissions, and Delete Collection Boxes</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/10_go_and_git.html">Working with git</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#get-a-github-account-make-a-repo-or-at-least-make-issues">Get a github account, make a repo - or at least make issues</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#getting-to-it">Getting to it</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#branching-is-best">Branching is best</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#important-note">Important note</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/10_go_and_git.html#updating-is-easyish">Updating is Easyish</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/11_git_troubles.html">Git Troubles</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/11_git_troubles.html#so-git-is-really-easy-and-won-t-give-me-any-problems">So git is really easy and won&#8217;t give me any problems?</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html">RHEL TLDR;</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#epel-rpm-repo">EPEL rpm repo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#git">git</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/12_rhel_tldr.html#yum-yum">yum yum</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../admin_guide/13_virtualenv.html">Python and the Virtual Environment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#install-virtualenv">Install virtualenv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#create-a-virtualenv-for-mdid3">Create a virtualenv for mdid3</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#re-get-your-python-libraries">Re-get your python libraries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../admin_guide/13_virtualenv.html#reconfigure-your-apache-conf-wsgi-script-to-use-the-virtual-env">Reconfigure your apache.conf &amp; wsgi script to use the virtual env</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul><li role="presentation" class="dropdown-header">On this page</li>
+<ul>
+<li><a class="reference internal" href="#">Installation Guide</a><ul>
+<li><a class="reference internal" href="#technical-overview">Technical Overview</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-installation">Software Installation</a><ul>
+<li><a class="reference internal" href="#install-dependencies">Install Dependencies</a><ul>
+<li><a class="reference internal" href="#management-systems">Management systems</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#software-package-installation">Software package installation</a><ul>
+<li><a class="reference internal" href="#update-installation">Update installation</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#optional-installs">Optional Installs</a><ul>
+<li><a class="reference internal" href="#ffmpeg-executable-for-audio-video-file-support">FFMPEG_EXECUTABLE for audio/video file support</a></li>
+<li><a class="reference internal" href="#open-office">Open Office</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="reference internal" href="#configuration">Configuration</a><ul>
+<li><a class="reference internal" href="#setup-user-accounts">Setup user accounts</a><ul>
+<li><a class="reference internal" href="#create-mdid-user-account-this-allows-mdid3-to-run-programs-on-its">Create MDID user account (this allows mdid3 to run programs on it’s</a></li>
+<li><a class="reference internal" href="#add-admin-account-not-the-mdid-utility-account-to-the-staff-group">Add admin account (not the mdid utility account) to the staff group</a></li>
+<li><a class="reference internal" href="#find-the-following-line-and-append-your-username-not-mdid">Find the following line and append your username (not mdid)</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#download-and-install-mdid3">### Download and Install MDID3</a><ul>
+<li><a class="reference internal" href="#git-mdid3">Git MDID3!</a></li>
+</ul>
+</li>
+<li><a class="reference internal" href="#setup-the-database">Setup the database</a></li>
+</ul>
+</li>
+</ul>
+
+            <li class="divider">&nbsp;</li>
+            </ul>
+            <ul>
+            <li class="divider">&nbsp;</li>
+            </ul>
+        </div>
+      </div>
+    <div class="col-md-9">
+      
+  <div class="section" id="installation-guide">
+<h1>Installation Guide<a class="headerlink" href="#installation-guide" title="Permalink to this headline">¶</a></h1>
+<div class="admonition warning" id="index-0">
+<p class="first admonition-title">Warning</p>
+<p class="last"><strong>Note</strong>: This page is a work in progress - ask on the list if a
+step doesn&#8217;t make sense</p>
+</div>
+<p>The Madison Digital Image Database is a freely distributed, open source
+web application developed at James Madison University. MDID is a digital
+media management system with sophisticated tools for discovering,
+aggregating, and presenting digital media in a wide variety of learning
+spaces.</p>
+<ul class="simple">
+<li>MDID3 Website: <a class="reference external" href="http://mdid.org">http://mdid.org</a></li>
+<li>Official Repository:
+<a class="reference external" href="https://github.com/cit-jmu/rooibos/tree/experimental">https://github.com/cit-jmu/rooibos/tree/experimental</a></li>
+<li>MDID3 Mailing List:
+<a class="reference external" href="https://listserv.jmu.edu/cgi-bin/wa?SUBED1=mdidusers-l&amp;A=1">https://listserv.jmu.edu/cgi-bin/wa?SUBED1=mdidusers-l&amp;A=1</a></li>
+</ul>
+<p>Please join the list and introduce yourself if you end up working with
+MDID3.</p>
+<div class="section" id="technical-overview">
+<h2>Technical Overview<a class="headerlink" href="#technical-overview" title="Permalink to this headline">¶</a></h2>
+<p>MDID3 is a <a class="reference external" href="https://docs.djangoproject.com/">django web application</a>
+that requires at minimum to run:</p>
+<ul class="simple">
+<li>a web server capable of serving WSGI applications, either using
+<a class="reference external" href="http://code.google.com/p/modwsgi/">mod_wsgi</a> with <a class="reference external" href="http://httpd.apache.org">Apache HTTP
+Server</a> or other alternative that works
+similarly (e.g.`uWSGI &lt;<a class="reference external" href="https://github.com/unbit/uwsgi-docs#readme">https://github.com/unbit/uwsgi-docs#readme</a>&gt;`__
+&amp; <a class="reference external" href="http://wiki.nginx.org/Main">nginx</a>) or <a class="reference external" href="http://www.iis.net">Microsoft
+IIS</a> with
+<a class="reference external" href="http://sourceforge.net/apps/trac/pyisapie">pyisapie</a><ul>
+<li>the webserver needs to be able to run python as a daemon for
+worker processes like image processing, data import, etc.</li>
+</ul>
+</li>
+<li>a <a class="reference external" href="http://lucene.apache.org/solr/">Apache Solr</a> server for search</li>
+<li>a memory object caching server like
+<a class="reference external" href="http://memcached.org">memcached</a> or <a class="reference external" href="http://www.couchbase.com/couchbase-server/overview">Couchbase
+Server</a></li>
+<li>a database server - all known installations are currently based in
+<a class="reference external" href="http://www.mysql.com/downloads/mysql/">mySQL</a> or MS SQL Server,
+but Postgress should theoretically work - let us know, won&#8217;t you?</li>
+<li><a class="reference external" href="https://docs.djangoproject.com/en/1.2/">django 1.2.3</a> is the most
+used, but 1.2.7 looks stable. It is possible that it is fully
+compatible with Django 1.4, but that is based solely on <a class="reference external" href="https://github.com/jcarbaugh/rooibos/commit/f80aca5c9614439735a9c7e93115bdaaff26c396">this repo&#8217;s
+commit
+notes</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="software-installation">
+<h1>Software Installation<a class="headerlink" href="#software-installation" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="install-dependencies">
+<h2>Install Dependencies<a class="headerlink" href="#install-dependencies" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="management-systems">
+<h3>Management systems<a class="headerlink" href="#management-systems" title="Permalink to this headline">¶</a></h3>
+<p>To install the software dependencies required for mdid3 to run, use the
+system-specific methods listed below. Experienced developers or system
+admins may take issue with some details - in many cases the way
+described is not &#8220;the only way&#8221; but rather &#8220;just a way&#8221; - in some cases
+it&#8217;s aiming to be describe simplest way. Feedback and alternative
+procedures are welcome, please feel free to submit them.</p>
+<p><strong>Package Management System/Command</strong></p>
+<table width=100%>
+<tr>
+<th width=25% align="center" valign="middle">Ubuntu</th>
+<th width=25% align="center" valign="middle" bgcolor="#efefef">Red Hat</th>
+<th width=25% align="center" valign="middle" >Mac OS X</th>
+<th width=25% align="center" valign="middle" bgcolor="#efefef">Windows 2008 or other</th>
+</tr>
+<tr>
+<td  align="center" valign="middle"><a href="https://help.ubuntu.com/community/AptGet/Howto">apt-get</a> </td>
+<td  align="center" valign="middle" bgcolor="#efefef">Redhat - <a href="http://www.ibm.com/developerworks/linux/library/l-lpic1-v3-102-5/">yum</a> <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/5/html/Deployment_Guide/c1-yum.html">rhel 5</a> | <a href="https://access.redhat.com/knowledge/docs/en-US/Red_Hat_Enterprise_Linux/6/html/Deployment_Guide/ch-yum.html">rhel 6</a> </td>
+<td  align="center" valign="middle"> <a href="http://mxcl.github.com/homebrew/">homebrew</a> <br/>download installers &amp; compile source</td>
+<td  align="center" valign="middle" bgcolor="#efefef">None (true? any dissent?).<br/>Download installers or executables.</td>
+</tr>
+</table></div>
+</div>
+<div class="section" id="software-package-installation">
+<h2>Software package installation<a class="headerlink" href="#software-package-installation" title="Permalink to this headline">¶</a></h2>
+<p>Below is a matrix of the software dependencies required for mdid3 to run
+correctly. In general, software installed via a package manager like apt
+or yum will be displayed as <tt class="docutils literal"><span class="pre">package-name</span></tt> whereas a downloadable
+installer, binary or downloadable source will be a <a class="reference external" href="#">text link</a></p>
+<p>Apt and Yum generally need to be run via sudo, but the Mac OS X package
+manager homebrew is designed specifically to <strong>not</strong> use sudo (assumedly
+because the normative mac user account has installation privileges). So
+to install <tt class="docutils literal"><span class="pre">packageX</span></tt>, use the commands:</p>
+<table width=99%>
+<tr>
+<th width=33% align="center" valign="middle">apt (Ubuntu)</th>
+<th width=33% align="center" valign="middle" bgcolor="#efefef">yum (Red Hat)</th>
+<th width=33% align="center" valign="middle" >homebrew (Mac OS X)</th>
+</tr>
+<tr>
+<td  align="center" valign="middle"><pre><code>sudo apt-get install packageX</code></pre></td>
+<td  align="center" valign="middle" bgcolor="#efefef"><pre><code>sudo yum install packageX</code></pre>
+</td>
+<td  align="center" valign="middle">
+<pre><code>brew install packageX</code></pre>
+</td>
+</tr>
+</table><p>Optionally, package managers can be given a list of packages, and be
+told to say &#8220;yes&#8221; to every question, and the human being installing the
+software can do something important, like drink coffee. A
+copy/paste-able single command will be presented at the bottom of the
+matrix.</p>
+<table width=100%>
+<tr>
+<td width=16% align="center" valign="middle" bgcolor="#efefef">&nbsp;</td>
+<th width=21%>Ubuntu</th>
+<th width=21% bgcolor="#efefef">Red Hat</th>
+<th width=21%>Mac OS X</th>
+<th width=21% bgcolor="#efefef">Windows 2008 or other</th>
+</tr>
+<tr>
+<tr>
+<th bgcolor="#efefef">python</th>
+<td align="center" valign="middle">installed</td>
+<td align="center" valign="middle" bgcolor="#efefef"><pre><code>python26</code></pre></td>
+<td align="center" valign="middle"><a href="http://mac.github.com">installed</a></td>
+<td align="center" valign="middle" bgcolor="#efefef">Python 2.7.3 <br>(<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.msi">32-bit</a>) | (<a href="http://www.python.org/ftp/python/2.7.3/python-2.7.3.amd64.msi">64-bit</a>)</td>
+</tr>
+
+<th bgcolor="#efefef">git</th>
+<td align="center" valign="middle"><pre><code> git-core</code></pre></td>
+<td align="center" valign="middle" bgcolor="#efefef"><pre><code>git-core</code></pre></td>
+<td align="center" valign="middle"><a href="http://mac.github.com">Github for Mac</a></td>
+<td align="center" valign="middle" bgcolor="#efefef"><a href="http://windows.github.com">Github for Windows</a></td>
+</tr>
+</table><div class="section" id="update-installation">
+<h3>Update installation<a class="headerlink" href="#update-installation" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>sudo apt-get -y upgrade &amp;&amp; install
+</pre></div>
+</div>
+<p>Install python packages using PIP</p>
+<div class="line-block">
+<div class="line">Many of the python libraries can be installed with <tt class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span></tt></div>
+</div>
+<p>[after pip is installed]
+(<a class="reference external" href="http://www.pip-installer.org/en/latest/installing.html">http://www.pip-installer.org/en/latest/installing.html</a>) or via
+easy_install (do your self a favor and install pip).
+| The exception in quite a few cases is Red Hat Enterprise Linux, where
+it is better to use yum to install many python libraries.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo pip install mysql-python pyodbc pil python-dateutil flickrapi werkzeug reportlab
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="optional-installs">
+<h2>Optional Installs<a class="headerlink" href="#optional-installs" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="ffmpeg-executable-for-audio-video-file-support">
+<h3>FFMPEG_EXECUTABLE for audio/video file support<a class="headerlink" href="#ffmpeg-executable-for-audio-video-file-support" title="Permalink to this headline">¶</a></h3>
+<blockquote>
+<div>mdid3 uses <a class="reference external" href="http://ffmpeg.org">ffmpeg</a> to process audio &amp; video
+media files. The current repo includes a windows installer, although
+a newer version may be available. Other platforms have to install
+the software and edit settings_local.py in order for a/v files to
+be processed.</div></blockquote>
+<p>The setting in
+<a class="reference external" href="https://github.com/cit-jmu/rooibos/blob/experimental/rooibos/settings.py">settings.py</a>
+is:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">FFMPEG_EXECUTABLE</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">install_dir</span><span class="p">,</span> <span class="s">&#39;dist&#39;</span><span class="p">,</span> <span class="s">&#39;windows&#39;</span><span class="p">,</span> <span class="s">&#39;ffmpeg&#39;</span><span class="p">,</span> <span class="s">&#39;bin&#39;</span><span class="p">,</span> <span class="s">&#39;ffmpeg.exe&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<p>which won&#8217;t work on linux installations, naturally.</p>
+<p>Linux admins should install ffmpeg if it isn&#8217;t installed and add the
+correct path (get with <tt class="docutils literal"><span class="pre">which</span> <span class="pre">ffmpeg</span></tt>) to settings_local.py, for
+example on RHEL/Centos:</p>
+<div class="highlight-python"><div class="highlight"><pre><span class="n">FFMPEG_EXECUTABLE</span> <span class="o">=</span> <span class="s">&#39;/usr/local/bin/ffmpeg&#39;</span>
+</pre></div>
+</div>
+<p>Links to the latest version for most platforms covered in this guide can
+be found at <a class="reference external" href="http://ffmpeg.org/download.html">http://ffmpeg.org/download.html</a></p>
+<p>Installation on RHEL 5 &amp; 6 can follow this guide if a yum package is not
+available for your specific version &amp; architecture:
+<a class="reference external" href="http://ffmpeg.org/trac/ffmpeg/wiki/CentosCompilationGuide">http://ffmpeg.org/trac/ffmpeg/wiki/CentosCompilationGuide</a></p>
+</div>
+<div class="section" id="open-office">
+<h3>Open Office<a class="headerlink" href="#open-office" title="Permalink to this headline">¶</a></h3>
+<p>TBD (for PPT import and export)</p>
+</div>
+</div>
+</div>
+<div class="section" id="configuration">
+<h1>Configuration<a class="headerlink" href="#configuration" title="Permalink to this headline">¶</a></h1>
+<p>As might be expected for a web application as complex and flexible as
+mdid3, a number of configuration steps are required to get going.</p>
+<div class="section" id="setup-user-accounts">
+<h2>Setup user accounts<a class="headerlink" href="#setup-user-accounts" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="create-mdid-user-account-this-allows-mdid3-to-run-programs-on-its">
+<h3>Create MDID user account (this allows mdid3 to run programs on it’s<a class="headerlink" href="#create-mdid-user-account-this-allows-mdid3-to-run-programs-on-its" title="Permalink to this headline">¶</a></h3>
+<p>own behalf)</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo adduser mdid
+</pre></div>
+</div>
+</div>
+<div class="section" id="add-admin-account-not-the-mdid-utility-account-to-the-staff-group">
+<h3>Add admin account (not the mdid utility account) to the staff group<a class="headerlink" href="#add-admin-account-not-the-mdid-utility-account-to-the-staff-group" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>sudo nano /etc/group
+</pre></div>
+</div>
+</div>
+<div class="section" id="find-the-following-line-and-append-your-username-not-mdid">
+<h3>Find the following line and append your username (not mdid)<a class="headerlink" href="#find-the-following-line-and-append-your-username-not-mdid" title="Permalink to this headline">¶</a></h3>
+<div class="highlight-python"><div class="highlight"><pre>staff:x:50:
+
+it will look like this when you’ve done it
+
+::
+
+    staff:x:50:mdid3admin:
+
+| (**ctrl-x** will exit, prompting you to &quot;*save modified buffer*\ &quot;
+(i.e.
+| the file you have open) - type “y” and the return/enter key to
+save
+| before exiting )
+</pre></div>
+</div>
+<p><em>Important:</em> <strong>Log out of the command line and log back in</strong></p>
+</div>
+</div>
+<div class="section" id="download-and-install-mdid3">
+<h2>### Download and Install MDID3<a class="headerlink" href="#download-and-install-mdid3" title="Permalink to this headline">¶</a></h2>
+<p>Create the directory where MDID3 will be installed as root, and then
+chown it to the account that will run the web app processes</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo mkdir /var/local/mdid
+sudo chown mdid:mdid /var/local/mdid
+sudo chmod 775 /var/local/mdid
+cd ..
+</pre></div>
+</div>
+<div class="section" id="git-mdid3">
+<h3>Git MDID3!<a class="headerlink" href="#git-mdid3" title="Permalink to this headline">¶</a></h3>
+<p>There are a few ways to approach getting the mdid3 repo onto your
+server, the instructions below</p>
+<blockquote>
+<div><tt class="docutils literal"><span class="pre">su</span> <span class="pre">mdid</span></tt> &#8211; this is optional - you could also continue as root or
+yourself, and then</div></blockquote>
+<div class="highlight-python"><div class="highlight"><pre>git clone git://github.com/cit-jmu/rooibos.git mdid
+cd mdid
+git checkout -b ourSite upstream/experimental
+
+``sudo chown -R mdid:staff /var/local/mdid/*`` # this is only
+necessary if you didn&#39;t su to the mdid account before downloading
+the mdid3 files.
+</pre></div>
+</div>
+<p>This step may be necessary if you execute git via root in your mdid3
+directories.</p>
+<div class="highlight-python"><div class="highlight"><pre>sudo chown -R mdid:staff /var/local/mdid/*
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="setup-the-database">
+<h2>Setup the database<a class="headerlink" href="#setup-the-database" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>nano mdid.sql
+</pre></div>
+</div>
+<p>and type this text in</p>
+<div class="highlight-python"><div class="highlight"><pre>CREATE DATABASE rooibos CHARACTER SET utf8;
+ GRANT ALL PRIVILEGES ON rooibos.* TO rooibos@localhost
+   IDENTIFIED BY &#39;rooibos&#39;;
+ UPDATE mysql.user SET Select_priv=&#39;Y&#39;,Insert_priv=&#39;Y&#39;,
+   Update_priv=&#39;Y&#39;,Delete_priv=&#39;Y&#39;,Create_priv=&#39;Y&#39;,
+   Drop_priv=&#39;Y&#39;,Index_priv=&#39;Y&#39;,Alter_priv=&#39;Y&#39;
+   WHERE Host=&#39;localhost&#39; AND User=&#39;rooibos&#39;;
+ FLUSH PRIVILEGES;
+ \q
+</pre></div>
+</div>
+<p>and then run the script with mysql</p>
+<div class="highlight-python"><div class="highlight"><pre>mysql -u &#39;root&#39; -p &lt; mdid.sql
+</pre></div>
+</div>
+<p>type the following two commands at /var/local/mdid/rooibos :</p>
+<div class="highlight-python"><div class="highlight"><pre>python manage.py syncdb --noinput
+python manage.py createcachetable cache
+
+Configure Apache &amp; mod_wsgi
+The developers of django recommend using a seperate webserver for static files on a production system
+See How to use Django with Apache and mod_wsgi for more information
+Edit /etc/apache2/httpd.conf:
+sudo cp /var/local/mdid/dist/linux/httpd.conf /etc/apache2/httpd.conf
+</pre></div>
+</div>
+<p>and add this line</p>
+<div class="highlight-python"><div class="highlight"><pre>WSGIScriptAlias / /var/local/mdid/rooibos/dist/linux/django.wsgi
+
+| *note*: the lone forward slash is not a typo - the first “/”
+indicates
+| that mdid will be the root o TRUNCATED! Please download pandoc if
+you
+| want to convert large files.
+</pre></div>
+</div>
+</div>
+</div>
+
+
+    </div>
+      
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2014, MDID Community.<br/>
+      
+        Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.2.2.
+        &nbsp;|&nbsp;
+
+        <a href="../_sources/installation/installation_guide.txt" rel="nofollow" target="_blank">Sphinx Source</a> <br/>
+    </p>
+  </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-9 col-md-offset-3">
+                <div id="disqus_thread"></div>
+            </div>
+        </div>
+    </div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'mdiddocumentation'; // required: replace example with your forum shortname
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function() {
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+
+</footer>
+  </body>
+</html>
